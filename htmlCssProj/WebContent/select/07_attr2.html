@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>'Page Title'</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    div{
+        width: 600px;
+        height: 50px;
+        border: 1px solid #000000;
+        margin: 20px; 
+    }
+    
+    div[ttt-data=abc]{          /* 정확하게 일치 */
+        color: #ff0000;
+    }
+    div[ttt-data~=abc]{         /* 단어로 포함 , (단어 속 , -  포함 내용은 배제), abc qwe 배제  */
+        color: #00ff00;
+    }
+    div[ttt-data|=abc]{         /* 단어로 포함 , abc- 포함, abc qwe 배제 */
+        background: #ff00ff;
+    }
+    div[ttt-data^=abc]{         /* abc로 시작 , abc- 포함 */
+        font-style: italic;
+    }
+    div[ttt-data$=yyy]{         /* yyy로 끝 , yyy로 끝나면 모두 포함 */
+        text-decoration: underline;
+    }
+    div[ttt-data*=abc]{         /* abc를 포함한 모든 요소 */
+        text-decoration: line-through;
+    }
+    img{
+        width: 200px;
+        /*\
+            jpg, jprg : 테두리색 빨강
+            bmp,gig : 테두리색 파랑
+            png : 테두리색 녹색
+        */
+    }
+
+    img[src$=jpg], img[src$=jpeg]{
+        border: 3px solid red;
+    }
+    
+    img[src$=bmp], img[src$=gif]{
+        border: 3px solid blue;
+    }
+    img[src$=png]{
+        border: 3px solid green;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>07_attr2</h1>
+    <div ttt-data="abc">
+        abd 다
+    </div>
+    <div ttt-data="eee">
+        eee 다
+    </div>
+    <div ttt-data="kkabkk">
+        kkabkk 다
+    </div>
+    <div ttt-data="abc qwe">
+        abd qwe 다
+    </div>
+    <div ttt-data="abc-qwe">
+        abd-qwe 다
+    </div>
+    <div ttt-data="zzzabcdefg">
+        zzzabcdefg 다
+    </div>
+    <div ttt-data="zzzabcdefgyyy">
+        zzzabcdefgyyy 다
+    </div>
+    <div ttt-data="abcdefgyyy">
+        abcdefgyyy 다
+    </div>
+
+    <br>
+
+    <img src="img/111.jpg" kkk-1="111">
+    <img src="img/blue.gif" kkk-1="112">
+    <img src="img/icon01.png" kkk-1="113">
+    <img src="img/icon02.jpeg" kkk-1="114">
+    <img src="img/icon03.bmp" kkk-1="115">
+</body>
+</html>

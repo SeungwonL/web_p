@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>02_var</title>
+  </head>
+  <body>
+    <h1>02_var</h1>
+    <script>
+      var a = 10,
+        b = 20;
+      document.write("결과: " + (a + b) + "<br>");
+
+      var name = "장동건",
+        kor = 88,
+        eng = 87,
+        mat = 71,
+        tot = kor + eng + mat,
+        avg = tot / 3;
+        grade = avg/10 > 9 ? '수' : avg/10 >=8 ? '우' : avg/10 >=7 ? '미' : avg/10 >=6 ? '양' : '가' 
+      document.write(
+        "이름: " + name + "<br>국어: " + kor + "<br>영어: " + eng +
+          "<br>수학: " + mat + "<br>합계: " + tot + "<br>평균: " + avg );
+
+      var ttt = '<table border="1">';
+      ttt += "<tr><td>이름</td><td>" + name + "</td></tr>";
+      ttt += "<tr><td>국어</td><td>" + kor + "</td></tr>";
+      ttt += "<tr><td>영어</td><td>" + eng + "</td></tr>";
+      ttt += "<tr><td>수학</td><td>" + mat + "</td></tr>";
+      ttt += "<tr><td>총점</td><td>" + tot + "</td></tr>";
+      ttt += "<tr><td>평균</td><td>" + avg + "</td></tr>";
+      ttt += "<tr><td>등급</td><td>" + grade + "</td></tr>";
+      ttt += "</table>";
+    </script>
+
+    <table border="">
+      <tr>
+        <td>이름</td>
+        <td>
+          <script>
+            document.write(name);
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>국어</td>
+        <td>
+          <script>
+            document.write(kor);
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>영어</td>
+        <td>
+          <script>
+            document.write(eng);
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>수학</td>
+        <td>
+          <script>
+            document.write(mat);
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>총점</td>
+        <td>
+          <script>
+            document.write(tot);
+          </script>
+        </td>
+      </tr>
+      <tr>
+        <td>평균</td>
+        <td>
+          <script>
+            document.write(avg);
+          </script>
+        </td>
+      </tr>
+    </table>
+    <script>
+      document.write(ttt);
+    </script>
+  </body>
+</html>

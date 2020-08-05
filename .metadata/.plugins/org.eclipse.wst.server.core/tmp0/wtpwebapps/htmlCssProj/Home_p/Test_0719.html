@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+    <title>Insert title here</title>  
+    <style>  
+    dl,dt,dd {margin:0; padding:0;}  
+    dt,dd {width:200px; padding:10px;}  
+    dt {background-color:#333; color:#bbb; margin-top:2px;}  
+    dd {background-color:#666; color:#ff0000;}  
+    #menuwrapper {width:400px; overflow:hidden; padding:10px; border:1px solid #ff6600;}  
+    </style>  
+    <script>  
+    window.onload = function() {  
+      var a = document.getElementsByTagName('dt');  
+      for (var i = 0; i < a.length; i++) {  
+        a[i].nextElementSibling.style.display = "none";  
+        a[i].onmouseover = function() {  
+          var st = this.nextElementSibling.style;  
+          if (st) {  
+            st.display="block"; 
+         }  
+      }  
+      a[i].onclick = function() {  
+        var st = this.nextElementSibling.style;  
+        if (st) {  
+          st.display="none"; 
+       }  
+    }  
+    }  
+    }  
+    </script>  
+    </head>  
+<body>  
+    <div id="menuwrapper">  
+    <dl>  
+    <dt>대분류1</dt>  
+    <dd>내용1</dd>  
+    <dt>대분류2</dt>  
+    <dd>내용2</dd>  
+    <dt>대분류3</dt>  
+    <dd>내용3</dd>  
+    <dt>대분류4</dt>  
+    <dd>내용4</dd>  
+    </dl>  
+    </div> 
+
+</body>
+</html>

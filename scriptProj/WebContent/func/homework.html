@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>0804_diary</title>
+    <style>
+        .wrapper{
+            width: 730px;
+            height: 1000px;
+            border: solid black 1px;
+            
+        }
+        .month {
+            width: 200px;
+            height: 210px;
+            border: solid black 1px;
+            float: left;
+            margin-left: 30px;
+            margin-top: 30px;
+            text-align: center;
+            color: peru;
+        }
+        
+        .date {
+            width: 26px;
+            height: 26px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 1px;
+            color: black;
+        }
+
+        .date:nth-of-type(1),.date:nth-of-type(8),.date:nth-of-type(15),.date:nth-of-type(22),
+        .date:nth-of-type(29),.date:nth-of-type(36){
+            color: red;
+        }
+        .date:nth-of-type(7),.date:nth-of-type(14),.date:nth-of-type(21),.date:nth-of-type(28),
+        .date:nth-of-type(35),.date:nth-of-type(42){
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>0804_diary</h1>
+    
+    <div = class="wrapper">
+        <script>
+            var today = new Date("2020-01-01")
+            for(var i = 1; i <= 12; i++){
+                var lastDay = new Date(today.getFullYear(), i, 0)
+                var firstDay = new Date(today.getFullYear(), i-1, 1)
+            
+                var ttt = '<div class="month">'+i+'월<br>'
+                for(var j = 0; j < 7 ; j++){
+                    ttt+= '<div class="date">'+'일월화수목금토'[j]+'</div>'
+                }
+                
+                for(var j = 1; j <= firstDay.getDay(); j++){
+                    ttt+= '<div class="date"></div>'
+                }
+                for(var j = 1; j <= lastDay.getDate(); j++){
+                    ttt+= '<div class="date">'+j+'</div>'
+                }
+
+                ttt+='</div>'
+                document.write(ttt)
+            }
+
+            
+        </script>
+
+
+    </div>
+</body>
+</html>

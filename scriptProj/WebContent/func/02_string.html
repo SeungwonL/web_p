@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>02_string</title>
+</head>
+<body>
+    <h1>02_string</h1>
+    <script>
+        var tt = "aBcD EafG 코리아 IT 아카데미 Academy 123"
+        //        0123456789 0 12345 6 7 8 9012345678901
+        document.write(tt+"<br>")
+        document.write(tt.length+"<br>")
+        document.write(tt[2]+"<br>")
+        document.write(tt[31]+"<br>")
+        document.write(tt[32]+"<br>")
+        document.write(tt.charAt(2)+"<br>")
+        document.write(tt.charAt(31)+"<br>")
+        document.write(tt.substring(2,7)+"<br>")
+        document.write(tt.substr(6,9)+"<br>")
+        document.write(tt.slice(2,7)+"<br>")
+
+        
+        document.write(tt.indexOf("a")+"<br>")
+        document.write(tt.indexOf("a", 3)+"<br>")
+        document.write(tt.indexOf("a", 10)+"<br>")
+        document.write(tt.indexOf("a", 25)+"<br>")
+        document.write(tt.lastIndexOf("a")+"<br>")
+
+        var fileName =  "aaa.bbbbb.cc.ddddd.ee.txt"
+        document.write(fileName.substring(fileName.lastIndexOf(".")+1)+"<br>")
+
+        var pos = fileName.lastIndexOf(".")
+        var ext = fileName.substring(pos+1)
+        document.write(ext+"<br>")
+
+        var arr =  fileName.split(".")
+        document.write(arr+"<br>")
+        // console.log(arr)
+
+        document.write(tt.toLowerCase()+"<br>")
+        document.write(tt.toUpperCase()+"<br>")
+        document.write(tt.replace("a","에이")+"<br>")
+        // document.write(tt.replaceAll("a","에이")+"<br>") -- replaceAll 없음
+
+        var pname = ["이정민","이승원","이승환"]
+        document.write(pname.join("-")+"<br>") 
+            //join : 배열 -> 문자열 (치환)
+
+            //replaceALl 하는 방법 - join 사용
+        arr =  tt.split("a")
+        document.write(arr.join("에이")+"<br>") 
+
+
+        var sss = "여긴 참나무숲\n장수 풍뎅이와 \n사슴벌레가 \n살지"
+        document.write(sss.split("\n").join("<br>")+"<br>")
+        
+
+        var qqq = "     코리아 아카데미     "
+            document.write(qqq.split("\n").join("<br>")+"<br>")
+            document.write(qqq.length+"<br>")
+            document.write(qqq.trim().length+"<br>")
+            
+        document.write("----------------------------<br>")
+        //주민번호를 가져와 생년월일, 성별, 국적을 출력하세요
+
+        var jnum = "890602-2234567"
+        var jarr = jnum.split("-")[0]
+
+        document.write(jarr)
+        
+        if(parseInt(jnum[7])%2!=0){
+            document.write(" 남자 ")
+        }else{
+            document.write(" 여자 ")
+        }
+        
+        if("5678".indexOf(jnum[7])==-1){
+            document.write(" 내국인 ")
+        }else{
+            document.write(" 외국인 ")
+        }
+        document.write("<br>----------------------------<br>")
+
+        var jumin = "020321-1234567"
+        var pp = eval(jumin[7])
+        document.write("성별:"+"여남"[pp%2]+"자<br>")
+        document.write("국적:"+"내외"[parseInt(pp/5)]+"국인<br>")
+
+        var birth = parseInt((pp-1)%4/2)+19
+        birth += jumin.substr(0,2)+"-"+jumin.substr(2,2)+"-"+jumin.substr(4,2)
+
+        document.write("생년월일:"+birth+"<br>")
+
+
+
+
+
+    </script>
+</body>
+</html>

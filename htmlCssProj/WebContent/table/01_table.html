@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>01_table</title>
+</head>
+<body>
+<h1>01_table</h1>
+
+<table border = "1" bgcolor = "#ff0">	<!-- border 은 table의 틀을 나타냄 -->
+	<tr height = "80px"  bgcolor = "#f00">
+		<td width = "200px" height = "50px" valign="top">내용 1_1</td>	<!-- height 는 가장 큰 놈을 따라감 --  그러므로 tr에 넣는게 편하다 -->
+		<td width = "300px" height = "50px" rowspan="2" valign="middle">내용1_2</td>
+		<td width = "100px" height = "50px" valign="bottom"  bgcolor = "#0f0">내용1_3</td>
+	</tr>
+	<tr height = "50px" align="center">
+		<td align = "right">
+			<img src = "../mmm/son_01.jpg" width = "200px">
+		</td>		 <!-- align 은 작은 범주가 우선권을 갖고 있다 -->
+		<td width = "200px">
+			<ol>
+				<li><a href = "http://www.naver.com">네이버</a>
+				<li><a href = "http://www.daum.net">다음</a>
+				<li><a href = "http://www.nate.com">네이트</a>
+			</ol>
+			
+		</td>		 <!-- width 도 가장 큰 놈을 기준으로 변경됨 -- 그러므로 처음에 한번 잡는게 편하다 -->
+	</tr>
+	<tr height = "50px">
+		<td>내용 3_1</td>
+		
+	</tr>
+	<tr height = "50px">
+		<td colspan = "3">
+			<table border = "1">
+				<tr height = "50px">
+					<td width = "350px" color = "#f00">새 내용1</td>  <!-- 칼라를 바꾸고 싶으면 style로 해야한다 -->
+					<td width = "350px" style = "color: #f00; font-size: 20px">새 내용2</td>
+				</tr>
+			</table>
+		</td>
+		
+	</tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>01_dom</title>
+    <style>
+        #con{
+            border: 1px solid black;
+            margin: 20px;
+            padding: 10px;
+        }
+        .box1{
+            background: #ffff00;
+        }
+        .box2{
+            background: #00ff00;
+        }
+        .box3{
+            background: #f0f;
+        }
+
+
+    </style>
+       <script>
+        window.onload = function(){ // 함수의 재정의
+
+            function log(msg){
+                var con = document.getElementById("con")
+                con.innerHTML += msg +"<br>"
+            }
+        
+        
+        var root = document.documentElement
+
+        // console.log(root)
+        console.log(root.tagName)
+
+        var bo = document.getElementsByTagName("body")
+        console.log(bo.length)
+        console.log(bo[0])
+        console.log(bo[0].tagName)
+        console.log(bo.item(0))
+        console.log(bo.item(0).tagName)
+
+        var sp = document.getElementsByTagName("span")
+
+        for(var i = 0; i <sp.length; i++){
+            log(sp[i].getAttribute("knn"))
+        }
+
+        for(var i = 0; i <sp.length; i++){
+            log(sp[i].innerHTML)
+        }
+
+        sp[1].setAttribute("knn","송동규")  //'요소' [엘리먼트]에서 보면 바뀐 것을 알 수 있음
+        sp[1].setAttribute("class","box2")
+        sp[1].innerHTML = "아침에 하냐"
+        sp[2].innerHTML += " 밖하냐"
+        
+        var yy = document.getElementsByClassName("yy")
+        for(var i = 0; i <yy.length; i++){
+            console.log("yy["+yy+"]"+yy[i].innerHTML)
+        }
+        yy[0].innerHTML = "yy 0번이지"
+
+
+        var aa = document.getElementById("a")
+        log(aa.innerHTML)
+        var cc = document.getElementById("c")
+        log(cc.innerHTML)
+        // console.log(cc.length)  -- 배열이 아니다 - id는 하나만 넣는 것이 기본이기에
+        // console.log(cc[0].innerHTML) -- 애초에 하나뿐 이기에 몇번째 이건 가져올 수 없다. 그러므로 에러남
+        cc.setAttribute("class","box3")
+            // 처음에 걸려있는 id만 적용된다 -  id는 하나만!
+        log("-------------------------------<br>");
+        var dd = document.getElementsByTagName("div")[0]
+        var dd_span = dd.getElementsByTagName("span")
+        log(dd_span.length)
+        log(dd_span[0].innerHTML)
+        var new_item = document.createElement("div")
+        new_item.setAttribute("class","box2")
+        new_item.innerHTML = "새로 만들었어요"
+        dd.appendChild(new_item)    // node 추가
+
+        dd.removeChild(dd_span[0])  // node 제거
+
+        }
+    </script>
+</head>
+<body>
+    <h1>01_dom</h1>
+    <span id="a" knn="이정민" class="box1">헬스하냐?</span>
+    <p>
+        <span id="b" knn="이승원" class="box1">너두하냐?</span>
+    </p>
+    <div>
+        <p>문단</p>
+        <span id="c" knn="차윤호" class="box1">안하냐?</span>
+        <div class="yy" id="c" onn="박성훈">나두하자</div>
+    </div>
+    <p class="yy">나는 놀아</p>
+    <p class="box1" id="c">나는 두번쨰 c야</p>
+
+
+    <div id="con"></div>
+ 
+</body>
+</html>

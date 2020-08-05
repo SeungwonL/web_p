@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    p{
+        width: 200px;
+        height: 100px;
+        background: #ffff00;
+    }
+
+    div{
+        width: 400px;
+        height: 200px;
+        background: #00ff00;
+        border: 1px solid #000000;
+    }
+
+    div > div{    /*자식 선택자*/
+        width: 300px;
+        height: 150px;
+        background: #ff00ff;
+        border: 1px solid #000000;
+    }
+
+    div p{      /*후손 선택자 : 위치에 따라 우선순위가 결정*/
+        width: 70px;
+        height: 70px;
+        background: #0ff;
+    }
+
+    div > p{      /*자식 선택자 : 위치에 따라 우선순위가 결정*/
+        width: 400px;
+        height: 50px;
+        background: #f00;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>01_child</h1>
+    <p>
+        p태그다 1
+    </p>
+    <br>
+    <p>
+        p태그다 2
+    </p>
+    <br>
+    <div>
+        div태그다 1
+
+    </div>
+    <br>
+    <div>
+        div태그다 2
+        <p>div 태그다 2 안에 p 태그다</p>
+        <span>
+            div태그다 3 안에 div 태그다 안에 p 태그다
+            <div>div태그다 3 안에 span 태그다 안에 div 태그다</div>
+        </span>
+    </div>
+    <br>
+    <div>
+        div태그다 3
+        <div>
+            div태그다 3 안에 div 태그다
+            <p>div태그다 3 안에 div 태그다 안에 p 태그다</p>
+        </div>
+
+        <span>
+            div태그다 3 안에 div 태그다 안에 p 태그다
+            <p>div태그다 3 안에 div 태그다 안에 p 태그다</p>
+        </span>
+    </div>
+
+</body>
+</html>

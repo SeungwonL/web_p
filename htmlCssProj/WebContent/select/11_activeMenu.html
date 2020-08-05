@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>11_activeMenu</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box{
+        width: 100px;
+        height: 100px;
+        background:white;
+        transition-duration: 1s;
+    }
+
+    .box:nth-of-type(1):hover{
+        background: red;
+        width: 500px;
+        /* height: 1200px;
+        margin-left: 100px; */
+    }
+    .box:nth-of-type(2):hover{
+        background: orange;
+        width: 500px;
+    }
+    .box:nth-of-type(3):hover{
+        background: yellow;
+        width: 500px;
+    }
+    .box:nth-of-type(4):hover{
+        background: green;
+        width: 500px;
+    }
+    .box:nth-of-type(5):hover{
+        background: blue;
+        width: 500px;
+    }
+    .box:nth-of-type(6):hover{
+        background: navy;
+        width: 500px;
+    }
+    .box:nth-of-type(7):hover{
+        background: purple;
+        width: 500px;
+    }
+
+    ul{
+        width: 300px;
+        margin: 0 auto;
+    }
+    li{
+        list-style: none;
+        width: 200px;
+        height:50px;
+        text-align: center;
+        background: #ff0;
+        overflow: hidden;
+        transition-duration: 0.5s;
+    }
+    li:hover{
+        background: #0f0;;
+    }
+
+    li>div{
+        width: 500px;
+        text-align: left;
+        margin-left: -500px;
+        transition-duration: 0.5s;
+    }
+
+    li:nth-of-type(2n)>div{
+        width: 500px;
+        text-align: left;
+        margin-left: 500px;
+        transition-duration: 0.5s;
+    }
+    li:hover>div{
+        margin: 0px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>11_activeMenu</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <br>
+
+    <ul>
+        <li>
+            제품
+            <div>
+                <a href="#">니품</a>
+                <a href="#">내품</a>
+                <a href="#">한품</a>
+            </div>
+        </li>
+    
+        <li>
+            갤러리
+            <div>
+                <a href="#">사진</a>
+                <a href="#">영상</a>
+                <a href="#">기타</a>
+            </div>
+        </li>
+
+        <li>고객센터
+            <div>
+                <a href="#">공지사항</a>
+                <a href="#">기타</a>
+                <a href="#">문의</a>
+            </div>
+        </li>
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, .tot{
+        clear:both;
+    }
+    
+    .box{
+        margin: 30px;
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+        float: left;
+    }
+
+    .box:nth-child(1){
+        border-radius: 20px;
+    }
+    .box:nth-child(2){
+        border-radius: 10px, 40px;
+    }
+    .box:nth-child(3){
+        border-radius: 50px ;
+    }
+    .box:nth-child(4){
+        border-radius: 10px 30px 20px 0px;
+    }
+
+    .tot:nth-of-type(2) > .box:nth-of-type(1){
+        opacity: 0.5;
+    }
+    .tot:nth-of-type(2) > .box:nth-of-type(2){
+        background: rgb(200,0,0);
+    }
+    .tot:nth-of-type(2) > .box:nth-of-type(3){
+        background: rgba(300,0,0);
+    }
+    
+    .tot:nth-of-type(3) > .box:nth-of-type(1){
+        background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%) ;
+    }
+    .tot:nth-of-type(3) > .box:nth-of-type(2){
+        background: -webkit-linear-gradient(top, #f1e767 0%,#feb645 100%); ;
+    }
+    .tot:nth-of-type(3) > .box:nth-of-type(3){
+        background: -webkit-linear-gradient(left, rgba(47,172,12,1) 0%,rgba(47,172,12,0.86) 10%,
+        rgba(41,154,11,0.72) 20%,rgba(47,172,12,0.29) 49%,
+        rgba(47,172,12,0.28) 50%,rgba(47,172,12,1) 100%);
+    }
+    .tot:nth-of-type(4) > .box:nth-of-type(1){
+        box-shadow: 50px 30px 0px #000;
+    }
+    .tot:nth-of-type(4) > .box:nth-of-type(2){
+        box-shadow: 10px 20px 5px #000;
+    }
+    .tot:nth-of-type(4) > .box:nth-of-type(3){
+        border-radius: 0;
+        box-shadow: 20px 0px 0px red, 0px 20px 0px yellow, -20px 0px 0px blue, 0px -20px 0px purple, 
+                    20px 20px 0px orange, -20px 20px 0px green, -20px -20px 0px navy, 20px -20px 0px black;
+    }
+
+    .tot:nth-of-type(5) > .box{
+        border-radius: 0px;
+    }
+    .tot:nth-of-type(5) > .box:nth-of-type(1){
+        box-shadow: inset 5px 10px 0px #000;
+    }
+    .tot:nth-of-type(5) > .box:nth-of-type(2){
+        box-shadow: inset 5px 10px 5px #0f0;
+    }
+    .tot:nth-of-type(5) > .box:nth-of-type(3){
+        box-sizing: border-box;
+        border: 10px solid #0f0;
+    }
+    .tot:nth-of-type(5) > .box:nth-of-type(4){
+        box-sizing: border-box;
+        border-top: 10px solid #0f0;
+    }
+    .tot:nth-of-type(5) > .box:nth-of-type(5){
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>01_radius</h1>
+    <!-- table>tr*3>td*4>img[src="aaa.jpg"] -->
+    <!--
+    <table>
+        <tr>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+        </tr>
+        <tr>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+            <td><img src="aaa.jpg" alt=""></td>
+        </tr>
+    </table>
+    --> 
+    <div class="tot">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+    <h1>alpha</h1>
+    <div class="tot">
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+    </div>
+
+    <h1>gradient</h1>
+    <div class="tot">
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+    </div>
+
+    <h1>box-shadow</h1>
+    <div class="tot">
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+    </div>
+    
+    <h1>inset</h1>
+    <div class="tot">
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+        <div class="box">난 box야</div>
+    </div>
+</html>

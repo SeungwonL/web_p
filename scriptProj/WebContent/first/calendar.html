@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <style>
+        .img{
+            width: 700px;
+            height: 400px;
+            background-image: url("../fff/son3.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-left: 250px;
+        }
+        .wrapper{
+            width: 700px;
+            height: 600px;
+            border: 1px solid #000;
+        }
+    
+        .wrapper>div{
+            width: 90px;
+            height: 90px;
+            background: lightgray;
+            margin: 5px;
+            float: left;
+        }
+        .wrapper>.empty{
+            background: white;
+        }
+        .wrapper>.day{
+            background: wheat;
+            text-align: center;
+            font-size: 30px;
+            line-height: 90px;
+        }
+        .month{
+            margin-top: 30px;
+            width: 700px;
+            height: 100px;
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .day:nth-of-type(1){
+            background: red;
+            color: white;
+        }
+        .day:nth-of-type(7){
+            background: blue;
+            color: white;
+        }
+        .date:nth-of-type(41){
+            background: yellow;
+        }
+        .date:nth-of-type(15),.date:nth-of-type(22),.date:nth-of-type(29),.date:nth-of-type(36){
+            color: red;
+        }
+        .date:nth-of-type(14),.date:nth-of-type(21),.date:nth-of-type(28),.date:nth-of-type(35){
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="img"></div>
+    <div class="month">2020년 7월</div>
+    <div class="wrapper">
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <div class="empty"></div>
+        <script>
+            for(i=1; i<=31; i++){
+                document.write('<div class="date"> '+i+'</div>')
+            }
+            // for(i=1; i<=6; i++){
+            //     document.write('<div class="red">'+(7*i-6)+'<div>')
+            //     document.write('<div class="blue">'+(7*i)+'<div>')
+            // }
+        </script>
+    </div>
+    
+</body>
+</html>

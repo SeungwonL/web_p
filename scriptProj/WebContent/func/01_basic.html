@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>01_basic</h1>
+    <script>
+
+        // alert("경고창입니다")
+
+        // var ii = prompt("1+1 ?")
+        // document.write("ii:"+ii+"<br>")
+
+
+        // var ii =  confirm("저장하시겠습니까?")
+        // document.write("ii:"+ii+"<br>")
+            // 확인 = true , 취소 =  false
+
+        function fn_1(a,b){
+            document.write("fn_1 실행:"+(a%b)+"<br>")
+            return 100
+        }
+
+            // 문자를 수식으로 코드전환
+        var a =  "2+3*4"
+        document.write("a:"+a+"<br>")
+        document.write("a:"+eval(a)+"<br>")
+        document.write(eval("fn_1(15,9)")+"<br>")
+
+        var b = "1234"
+        document.write(b+100+"<br>")
+        document.write(parseInt(b)+100+"<br>")
+        document.write(parseInt(123.456)+100+"<br>")
+        document.write(parseFloat(123.456)+100+"<br>")
+
+            // 숫자가 아닌 집합 = true , 숫자인 집합 = false
+        document.write(isNaN("asdfasf")+"<br>")
+        document.write(isNaN(4567)+"<br>")
+        document.write(isNaN("4567")+"<br>")
+        document.write(isNaN(true)+"<br>")
+        document.write(isNaN(false)+"<br>")
+        document.write(isNaN("1234asdf")+"<br>")
+        document.write(isNaN("100+200")+"<br>")
+
+        document.write("-----------------------------------------<br>")
+
+        function aaa(){
+            alert("3초 뒤에 출력할걸?")
+            // document.write()
+        }
+        // setTimeout(aaa, 3000) 
+
+        // setTimeout(
+        //     function(){
+        //         alert("호출이요")
+        //     },3000)
+
+        var gogo
+        
+        var i = 0
+        function bbb(){
+            document.write(i+"<br>")
+            i++
+        }
+
+        // setInterval(bbb,1000)
+
+        function startGo(){
+            alert('눌렀구마')
+            gogo = setInterval(bbb,1000)
+                // setInterval의 정보를 gogo가 받음
+            document.write('<input type="button" value="멈춤" onclick="stopGo()" /><br>')
+        }
+
+        function stopGo(){
+            alert('멈추는구마')
+            clearInterval(gogo)
+                // setInterval을 받은 gogo를 넣어서 멈추게 한다
+        }
+
+
+    </script>
+
+
+    <input type="button" value="시작" onclick="startGo()"/>
+    
+    
+</body>
+</html>

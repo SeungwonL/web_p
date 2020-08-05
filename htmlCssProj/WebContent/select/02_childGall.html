@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>08_overflowGall</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        img{
+            width:300px;
+            height:200px; 
+            display: block;
+            float: left;
+        }
+        .small1{
+            width:317px;
+            height:200px;
+            background: #ff0;
+            overflow: auto; 
+        }
+
+        .small2{
+            width:500px;
+            height:317px;
+            background: #ff0;
+            overflow: auto; 
+            float: left;
+        }
+
+        .small2 > div{
+            width: 2000px;
+            height: 300px;
+        }
+
+        .small2 > div > img{
+            width:500px;
+            height:300px;
+        }
+
+   
+
+    </style>
+</head>
+<body>
+<h1>02_childGall</h1>
+<div class="small1">
+    <img src="../mmm/naver.png">
+    <img src="../mmm/son_01.jpg">
+    <img src="../mmm/son_02.jpg">
+    <img src="../mmm/sch.png">
+</div>
+
+
+<div class="small2">
+    <div>
+        <img src="../mmm/naver.png">
+        <img src="../mmm/son_01.jpg">
+        <img src="../mmm/son_02.jpg">
+        <img src="../mmm/sch.png">
+    </div>
+</div>
+
+</body>
+</html>

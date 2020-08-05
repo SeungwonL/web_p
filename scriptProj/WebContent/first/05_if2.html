@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>05_if2</title>
+    <script type="text/javascript">
+
+        var name = '정우성'
+        var age = 20
+
+        var go = ''
+        if(age >= 20){
+            go = '<a href="adult?name='+name+'">성인 회원가입</a>'
+        }else{
+            go = '<a href="miner?name='+name+'">미성년자 회원가입</a>'
+        }
+
+    </script>
+</head>
+<body>
+    <h1>05_if2</h1>
+    <!-- <a href="adult">성인 회원가입</a>
+    <a href="miner">미성년자 회원가입</a>     -->
+    <script>
+        document.write(go)
+    </script>
+</body>
+</html>
